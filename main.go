@@ -16,7 +16,7 @@ type Measurement struct {
 	Count int64
 }
 
-func (m *Measurement) addTemp(temp float64) {
+func (m *Measurement) AddTemp(temp float64) {
 	m.Sum += temp
 	m.Min = min(m.Min, temp)
 	m.Max = max(m.Max, temp)
@@ -63,7 +63,7 @@ func main() {
 			}
 			continue
 		}
-		existisMeasurement.addTemp(temp)
+		existisMeasurement.AddTemp(temp)
 		
 	}
 
